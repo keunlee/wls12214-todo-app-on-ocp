@@ -3,3 +3,4 @@ out
 **/target
 **/weblogic-deploy.zip
 **/weblogic-kubernetes-operator
+*.iml
