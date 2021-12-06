@@ -12,7 +12,6 @@ spec:
       command: ["/bin/bash", "-c"]
       args:
         - |-
-          yum install git -y
           POSTGRESQL_POD=$(oc get po --selector=name=postgres -o jsonpath='{..metadata.name}')
           
           if [ -z "$POSTGRESQL_POD" ];
