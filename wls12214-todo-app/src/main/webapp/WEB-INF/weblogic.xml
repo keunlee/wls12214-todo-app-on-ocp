@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app">
+    <resource-description>
+        <res-ref-name>pg</res-ref-name>
+        <jndi-name>pg</jndi-name>
+    </resource-description>
+    <context-root>wls12214-todo-app</context-root>
+</weblogic-web-app>

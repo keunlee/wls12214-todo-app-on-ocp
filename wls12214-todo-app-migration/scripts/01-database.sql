@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS todo;
+
+CREATE DATABASE todo
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;

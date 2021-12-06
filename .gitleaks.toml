@@ -1,0 +1,7 @@
+title = "huskyCI gitleaks config"
+[whitelist]
+files = [
+    "(.*?)(yaml|jpg|gif|doc|pdf|bin)$",
+    "^vendor/(.*?)$",
+    ".gitleaks.toml",
+]

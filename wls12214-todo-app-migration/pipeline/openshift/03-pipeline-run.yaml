@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: using-build-and-deploy-
+spec:
+  pipelineRef:
+    name: build-and-deploy
+  workspaces:
+  - name: build-workspace
+    persistentVolumeClaim:
+      claimName: shared-task-storage
+  params:
+  - name: repo-url
+    value: https://github.com/keunlee/wls12214-todo-app-on-ocp.git
+  - name: branch-name
+    value: dev
+  - name: repo-dockerfile
+    value: Dockerfile
+  - name: image-url
+    value: image-registry.openshift-image-registry.svc:5000/demo-todo-wls12214/wls12214todoapp:1.2
+  - name: repo-context
+    value: wls12214-todo-app-migration
