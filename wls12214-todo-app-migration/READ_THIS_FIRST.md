@@ -1,3 +1,5 @@
+## Set up a Jumpbox
+
 ## Generated Artifacts
 | Artifact | Description                                                                  |
 | --- |------------------------------------------------------------------------------|
