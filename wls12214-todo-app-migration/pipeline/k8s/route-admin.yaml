@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: admin-server
+  labels:
+    serviceType: EXTERNAL
+    weblogic.createdByOperator: 'true'
+    weblogic.domainName: domain1
+    weblogic.domainUID: domain1
+    weblogic.serverName: admin-server
+spec:
+  path:
+    /console
+  to:
+    kind: Service
+    name: domain1-admin-server-ext
+    weight: 100
+  port:
+    targetPort: default
+  wildcardPolicy: None

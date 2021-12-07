@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: todo
+  labels:
+    serviceType: CLUSTER
+    weblogic.clusterName: cluster-1
+    weblogic.createdByOperator: 'true'
+    weblogic.domainName: domain1
+    weblogic.domainUID: domain1
+spec:
+  path:
+    /wls12214-todo-app
+  to:
+    kind: Service
+    name: domain1-cluster-cluster-1
+    weight: 100
+  port:
+    targetPort: default
+  wildcardPolicy: None
