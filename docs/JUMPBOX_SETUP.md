@@ -68,22 +68,22 @@ user@jumpbox-host$ exit
 jsmith@local-host$
 ```
 
-**step 5: copy `jumpbox/start-build.sh` script to `user` home directory of jumpbox host, `user@jumpbox-host`**
+**step 5: copy `wls12214-todo-app-migration/jumpbox/start-build.sh` script to `user` home directory of jumpbox host, `user@jumpbox-host`**
 
 ```bash
-jsmith@local-host$ scp jumpbox/start-build.sh user@jumpbox-host:~/
+jsmith@local-host$ scp wls12214-todo-app-migration/jumpbox/start-build.sh user@jumpbox-host:~/
 ```
 
 **step 6: update `~/start-build.sh` on jumpbox host**
 
-Login into jumpbox and modify the following values on the script located on the **jumpbox**
+Login into jumpbox:
 
 ```bash
 jsmith@local-host$ ssh user@jumpbox-host
 user@jumpbox-host$ vi ~/start-build.sh
 ```
 
-in `start-build.sh` on the jumpbox:
+and modify the following values on the script located on the **jumpbox** in `~/start-build.sh`:
 
 ```
 OCP_USER=openshift_user # an openshift user with sufficient privileges
@@ -250,6 +250,10 @@ You should be successfully logged into the Openshift image registry at this poin
 ## Push Weblogic Container Image to Openshift Registry
 
 You must have an account that has permission to access the Oracle Container Registry. This enables you to pull the base image used in the steps below. If you do not already have an account, you can go to https://container-registry.oracle.com and create one.
+
+Additionally, once you login to the container registry at Oracle, navigate to the weblogic image page, and make sure to accept the terms and restrictions agreement, otherwise, you will NOT be able to pull down the image. 
+
+![Screenshot from 2021-12-07 17-33-07](https://user-images.githubusercontent.com/61749/145122229-7e844362-301d-4117-b0d1-fcfc1bb5b8b4.png)
 
 Login to the jumpbox if not already in: 
 

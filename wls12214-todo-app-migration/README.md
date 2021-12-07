@@ -1,6 +1,6 @@
 ## Setup Jumpbox
 
-To leverage build automation of Docker images on Openshift, for this project, it requires the use of a jumpbox. To set up jumpbox: 
+To leverage build automation of Docker images on Openshift, for this project, it requires the use of a jumpbox. To set up a jumpbox: 
 
 see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
