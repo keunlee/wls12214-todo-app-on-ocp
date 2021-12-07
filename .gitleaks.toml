@@ -11,3 +11,4 @@ files = [
     files = [
         '''(.*)?yaml$'''
     ]
+title = "gitleaks config"
