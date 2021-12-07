@@ -21,6 +21,6 @@ docker build \
     --build-arg WDT_ARCHIVE=domain/archive.zip \
     --force-rm=true \
     -f Dockerfile.template \
-    -t wls12214todoapp:1.2 .
-docker tag wls12214todoapp:1.2 $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/demo-todo-wls12214/wls12214todoapp:1.2
-docker push $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/demo-todo-wls12214/wls12214todoapp:1.2
+    -t wls12214todoapp:1.3 .
+docker tag wls12214todoapp:1.3 $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/demo-todo-wls12214/wls12214todoapp:1.3
+docker push $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/demo-todo-wls12214/wls12214todoapp:1.3

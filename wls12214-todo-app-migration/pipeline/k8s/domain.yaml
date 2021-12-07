@@ -24,7 +24,7 @@ spec:
   domainHomeSourceType: Image
 
   # Update this with the name of the image that will be used to run your domain:
-  image: "image-registry.openshift-image-registry.svc:5000/demo-todo-wls12214/wls12214todoapp:1.2"
+  image: "image-registry.openshift-image-registry.svc:5000/demo-todo-wls12214/wls12214todoapp:1.3"
 
   # imagePullPolicy defaults to "Always" if image version is :latest
   imagePullPolicy: "Always"
