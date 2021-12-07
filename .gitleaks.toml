@@ -5,3 +5,9 @@ files = [
     "^vendor/(.*?)$",
     ".gitleaks.toml",
 ]
+
+[allowlist]
+    description = "ignore yaml files"
+    files = [
+        '''(.*)?yaml$'''
+    ]
