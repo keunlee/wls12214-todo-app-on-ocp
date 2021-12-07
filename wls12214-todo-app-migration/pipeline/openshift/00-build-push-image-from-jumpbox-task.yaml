@@ -12,11 +12,8 @@ spec:
       command: ["/bin/bash", "-c"]
       args:
         - |-
-          dnf install git openssh openssh-clients -y
+          dnf install openssh-clients -y
           cd ~
-          git clone https://github.com/keunlee/wls12214-todo-app-on-ocp.git
-          cd wls12214-todo-app-on-ocp
-          git checkout dev
           
           mkdir ~/.ssh
           jumpbox_host=$(oc get secret jumbox-secrets -o jsonpath={.data.jumpbox_host} | base64 -d) 
