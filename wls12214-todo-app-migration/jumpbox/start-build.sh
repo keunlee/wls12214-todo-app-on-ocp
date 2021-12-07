@@ -6,6 +6,7 @@
 OCP_USER=openshift_user # an openshift user with sufficient privileges
 OCP_PASSWORD=openshift_passwd # your user password
 OCP_SERVER=https://api.cluster-name.domain.local:6443 # your openshift server's api uri
+GIT_BRANCH=main
 
 # remove previous project build
 rm -rf wls12214-todo-app-on-ocp
@@ -23,7 +24,7 @@ IMAGE_REGISTRY_LOGIN_TOKEN=$(oc whoami -t)
 docker login -u $OCP_USER -p $IMAGE_REGISTRY_LOGIN_TOKEN $IMAGE_REGISTRY
 
 # get build assets by cloning the repository on the selected branch
-git clone -b dev --single-branch https://github.com/keunlee/wls12214-todo-app-on-ocp.git
+git clone -b $GIT_BRANCH --single-branch https://github.com/keunlee/wls12214-todo-app-on-ocp.git
 
 # launch build to build image and push to image registry
 cd wls12214-todo-app-on-ocp/wls12214-todo-app-migration/weblogic/
