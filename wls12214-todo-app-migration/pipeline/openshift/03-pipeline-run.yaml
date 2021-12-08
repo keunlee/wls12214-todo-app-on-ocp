@@ -13,7 +13,7 @@ spec:
   - name: repo-url
     value: https://github.com/keunlee/wls12214-todo-app-on-ocp.git
   - name: branch-name
-    value: dev
+    value: main
   - name: repo-dockerfile
     value: Dockerfile
   - name: image-url
