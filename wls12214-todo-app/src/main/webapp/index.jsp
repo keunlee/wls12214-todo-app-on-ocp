@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<div style="position: absolute; top: 0px; left: 0px;"><img style="width: 50px;margin: 10px;" src="static/logo.png"></div>
 <section class="todoapp">
     <header class="header">
         <h1>todos</h1>
