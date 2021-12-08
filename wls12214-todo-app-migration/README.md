@@ -40,7 +40,27 @@ see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 4. If you wish to control and monitor your pipeline from the command line, install the OpenShift pipeline CLI by following the instructions [here](https://github.com/tektoncd/cli)
 
-### Steps
+### Steps - Build and Deploy Now - as-is
+
+```bash
+# delete project if it exists and wait for it to terminate
+oc delete project demo-todo-wls12214
+
+# create project
+oc new-project demo-todo-wls12214
+
+# apply jumpbox secrets (these are not checked in, and you need to generate
+# this if you do not have it -- see "Steps - Detailed")
+oc apply -f /path/to/jumpbox-secrets.yaml
+
+# create pipeline, pipeline resources, and a pipeline run to trigger a pipeline
+oc create -f wls12214-todo-app-migration/pipeline/openshift
+
+# navigate to the route below after deployment
+oc get routes
+```
+
+### Steps - Detailed
 
 1. Login to OCP cluster and create a project
    ```
