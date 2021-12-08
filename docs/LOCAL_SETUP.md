@@ -60,7 +60,10 @@ You will need to have a copy of the Postgres Driver Library at hand to point to 
 
 **Deploy the EAR file**
 
-- Weblogic Admin Console - http://localhost:7001/console
+Weblogic Admin Console - http://localhost:7001/console
+
+![Screenshot from 2021-12-07 18-11-25](https://user-images.githubusercontent.com/61749/145125393-48379ecf-8dee-4450-a84a-fca0beff8cad.png)
+
 
 **Validate your database connectivity by navigating to:**
 
