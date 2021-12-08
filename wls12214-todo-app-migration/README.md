@@ -1,27 +1,29 @@
-## Setup Jumpbox
-
-To leverage build automation of Docker images on Openshift, for this project, it requires the use of a jumpbox. To set up a jumpbox: 
-
-see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
+# Deploy to Openshift
 
 ## Generated Artifacts
 | Artifact                               | Description                                                             |
 |----------------------------------------|-------------------------------------------------------------------------|
- | weblogic/domain/archive.zip            | Application binary ear, or war, or jar file compressed into a zip file  |
- | weblogic/domain/topology.original.yaml | Weblogic Server Topology Descriptor                                     |
+| weblogic/domain/archive.zip            | Application binary ear, or war, or jar file compressed into a zip file  |
+| weblogic/domain/topology.original.yaml | Weblogic Server Topology Descriptor                                     |
 
 ## Non-Generated/Provided Artifacts
 | Artifact                     | Description                                         |
 |------------------------------|-----------------------------------------------------|
 | weblogic/Dockerfile          | Dockerfile to build the application container image |
- | weblogic/Dockerfile.template | Dockerfile template to be used during scripting automation process |
- | weblogic/build.sh            | A build script used to invoke the build process for automation |
- | weblogic/properties          | Property files used to aid in the container image build and run process |
- | weblogic/container-scripts   | Scripts used to aid in the build of the application image during a Docker build run |
- | scripts/*.sql                | Database creation scripts |
- | jumpbox/start-build.sh       | Start build script, which gets placed onto the Jumpbox to kickoff of a build |
+| weblogic/Dockerfile.template | Dockerfile template to be used during scripting automation process |
+| weblogic/build.sh            | A build script used to invoke the build process for automation |
+| weblogic/properties          | Property files used to aid in the container image build and run process |
+| weblogic/container-scripts   | Scripts used to aid in the build of the application image during a Docker build run |
+| scripts/*.sql                | Database creation scripts |
+| jumpbox/start-build.sh       | Start build script, which gets placed onto the Jumpbox to kickoff of a build |
 | pipeline/k8s/ | Directory for the application deployment manifest files |
 | pipeline/openshift/ | Directory for OpenShift pipeline manifest files |
+
+## Setup Jumpbox
+
+To leverage build automation of Docker images on Openshift, for this project, it requires the use of a jumpbox. To set up a jumpbox: 
+
+see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 ### Notes
 - The pipeline artifacts for openshift are compatible with OpenShift >= 4.6.
