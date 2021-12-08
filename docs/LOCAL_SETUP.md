@@ -36,6 +36,11 @@ The resulting build will show in the following target folders:
 
 **Setup JNDI in Websphere Application Server**
 
+Login to the server:
+
+Weblogic Admin Console - http://localhost:7001/console
+
+
 You will need to have a copy of the Postgres Driver Library at hand to point to in the JNDI setup classpath below. see:
 
 ```bash
