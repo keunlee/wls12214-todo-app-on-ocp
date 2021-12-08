@@ -17,6 +17,6 @@ spec:
   - name: repo-dockerfile
     value: Dockerfile
   - name: image-url
-    value: image-registry.openshift-image-registry.svc:5000/demo-todo-wls12214/wls12214todoapp:1.3
+    value: image-registry.openshift-image-registry.svc:5000/demo-todo-wls12214/wls12214todoapp:1.4
   - name: repo-context
     value: wls12214-todo-app-migration

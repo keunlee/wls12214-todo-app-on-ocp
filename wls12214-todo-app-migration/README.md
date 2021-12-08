@@ -40,7 +40,7 @@ see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 4. If you wish to control and monitor your pipeline from the command line, install the OpenShift pipeline CLI by following the instructions [here](https://github.com/tektoncd/cli)
 
-### Steps - Build and Deploy Now - as-is
+### Steps - Build and Deploy - as-is
 
 ```bash
 # delete project if it exists and wait for it to terminate
