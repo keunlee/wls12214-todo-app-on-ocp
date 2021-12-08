@@ -68,6 +68,7 @@ see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 > important note: make sure to also update the namespaces found in:
 ```json
+weblogic/domain/topology.yaml
 weblogic/build.sh
 pipeline/k8s/domain.yaml
 pipeline/openshift/03-pipeline-run.yaml
