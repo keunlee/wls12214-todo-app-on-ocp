@@ -75,7 +75,7 @@ pipeline/openshift/03-pipeline-run.yaml
 ```
 > to update the namespace in `weblogic/domain/topology.yaml`, you will need to regenerate that with the WDT tool provided by Oracle. 
 > 
-> see [GENERATE_WSL_TOPOLOGY](../docs/GENERATE_WLS_TOPOLOGY.md)
+> see [GENERATE_WLS_TOPOLOGY](../docs/GENERATE_WLS_TOPOLOGY.md)
 
   - Set context root in route resource in the file `pipeline/k8s/route.yaml`. The path is set to / by default.
 
