@@ -19,11 +19,7 @@ Todo Application - WebLogic 12.2.1.4 on Openshift
 
 # Deploy to Openshift
 
-Leveraging the IBM Transformation Advisor, the contents of `was855-todo-app-migration` are generated.
-
-After artifact generation, you can tailor any facet of the artifacts generated to suit your deployment needs to Openshift.
-
-see [wls12214-todo-app-migration/README](wls12214-todo-app-migration)
+see [OPENSHIFT_SETUP](wls12214-todo-app-migration)
 
 # Deploy Locally
 
