@@ -44,7 +44,9 @@ see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 ### Steps - Build and Deploy - Summarized Steps
 
-Below are build and deploy steps for "as is" deployment
+Below are build and deploy steps for "as is" deployment. 
+
+Note: You will need a jumpbox for this work. see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 ```bash
 # delete project if it exists and wait for it to terminate
@@ -54,7 +56,7 @@ oc delete project demo-todo-wls12214
 oc new-project demo-todo-wls12214
 
 # apply jumpbox secrets (these are not checked in, and you need to generate
-# this if you do not have it -- see "Steps - Detailed")
+# this if you do not have it -- see docs/JUMPBOX_SETUP.md)
 oc apply -f /path/to/jumpbox-secrets.yaml
 
 # create pipeline, pipeline resources, and a pipeline run to trigger a pipeline
