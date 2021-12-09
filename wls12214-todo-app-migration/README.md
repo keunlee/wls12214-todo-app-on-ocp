@@ -93,14 +93,10 @@ oc get routes
 
 > important note: make sure to also update the namespaces found in:
 ```json
-weblogic/domain/topology.yaml
 weblogic/build.sh
 pipeline/k8s/domain.yaml
 pipeline/openshift/03-pipeline-run.yaml
 ```
-> to update the namespace in `weblogic/domain/topology.yaml`, you will need to regenerate that with the WDT tool provided by Oracle. 
-> 
-> see [GENERATE_WLS_TOPOLOGY](../docs/GENERATE_WLS_TOPOLOGY.md)
 
   - The branch for the git repo is set to `master` by default, if you wish to update that please do so in the `03-pipeline-run.yaml` file.
 
