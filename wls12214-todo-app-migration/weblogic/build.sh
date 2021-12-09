@@ -1,3 +1,6 @@
+# This script is to be run on your jumpbox
+# see: docs/JUMPBOX_SETUP.md for more info
+
 wget https://github.com/oracle/weblogic-deploy-tooling/releases/download/release-1.9.12/weblogic-deploy.zip
 git clone https://github.com/oracle/weblogic-kubernetes-operator.git
 cd weblogic-kubernetes-operator

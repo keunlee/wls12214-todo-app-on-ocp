@@ -9,9 +9,13 @@ During a build, the Openshift Pipeline will leverage a Tekton Task which will ss
 ## Jumpbox Requirements
 
 - Physical or virtualized environment. It must be reachable by your Openshift cluster (preferably on the same network)
-- Fedora (>= 33 ) or RHEL (>= 8) Linux OS
+- Any Linux environment that can support the following tooling below (i.e. Fedora (>= 33 ))
 - Docker CE installed
-- Openshift CLI (`oc`) >= 4.6.x
+- CLI Tools
+  - Docker CLI
+  - git CLI
+  - wget CLI
+  - Openshift CLI (`oc`) >= 4.6.x
 - Openshift username/password (i.e. `oc_user/oc_passwd`) (via htpasswd)
     - You will need to set this up on your openshift cluster
 

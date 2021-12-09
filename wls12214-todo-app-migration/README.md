@@ -40,6 +40,8 @@ see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 4. If you wish to control and monitor your pipeline from the command line, install the OpenShift pipeline CLI by following the instructions [here](https://github.com/tektoncd/cli)
 
+5. A jumpbox to build your container image. See previous section on setting up a jumpbox.
+
 ### Steps - Build and Deploy - Summarized Steps
 
 Below are build and deploy steps for "as is" deployment
