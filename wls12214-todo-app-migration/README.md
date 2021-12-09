@@ -42,6 +42,8 @@ Below are build and deploy steps for "as is" deployment.
 Note: You will need a jumpbox for this work. see [docs/JUMPBOX_SETUP](../docs/JUMPBOX_SETUP.md)
 
 ```bash
+# login into openshift - oc login ...
+
 # delete project if it exists and wait for it to terminate
 oc delete project demo-todo-wls12214
 
