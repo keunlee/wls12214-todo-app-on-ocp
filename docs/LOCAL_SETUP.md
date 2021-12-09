@@ -24,7 +24,7 @@ The resulting build will show in the following target folders:
 ├── wls12214-todo-app
 │   └── target
 │       └── wls12214-todo-app-1.0-SNAPSHOT.war
-├── was855-todo-app-ear
+├── wls12214-todo-app-ear
 │   └── target
 │       └── wls12214-todo-app-ear-1.0-SNAPSHOT.ear
 ```
@@ -41,13 +41,7 @@ Login to the server:
 Weblogic Admin Console - http://localhost:7001/console
 
 
-You will need to have a copy of the Postgres Driver Library at hand to point to in the JNDI setup classpath below. see:
-
-```bash
-├── was855-todo-app-migration
-│   └── lib
-│       └── postgresql-42.3.1.jar
-```
+You will need to have a copy of the Postgres Driver Library at hand, `postgresql-42.3.1.jar`, to point to in the JNDI setup classpath below. see:
 
 - Add a JDBC Provider 
 
