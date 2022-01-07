@@ -110,8 +110,10 @@ user@jumpbox-host$
 On the jumpbox, login to Openshift (i.e.)
 
 ```bash
- user@jumpbox-host$ oc login -u openshift_user -p openshift_passwd  https://api.cluster-name.domain.local:6443
+ user@jumpbox-host$ oc login -u openshift_user -p openshift_passwd  https://api.[cluster-name].[domain]:6443
 ```
+
+> Make sure that your `[cluster-name]` and `[domain]` matches your environment. You will need this going forward in steps below. For example, `[cluster-name]` replaced by `mycluster`, and `[domain]` replaced by `mydomain.local`, such that `[cluster-name].[domain]` becomes `mycluster.mydomain.local`
 
 create an openshift login token and save it to a shell variable:
 
@@ -147,8 +149,10 @@ user@jumpbox-host$ oc get route default-route -n openshift-image-registry --temp
 you should get a value that looks similar to the following: 
 
 ```
-default-route-openshift-image-registry.apps.cluster-name.domain
+default-route-openshift-image-registry.apps.[cluster-name].[domain]
 ```
+
+> Make sure that your `[cluster-name]` and `[domain]` matches your environment. You will need this going forward in steps below. For example, `[cluster-name]` replaced by `mycluster`, and `[domain]` replaced by `mydomain.local`, such that `[cluster-name].[domain]` becomes `mycluster.mydomain.local`
 
 2. login as root
 
@@ -162,7 +166,7 @@ root@jumpbox-host$
 ```json
 {
     "insecure-registries" : [
-	    "default-route-openshift-image-registry.apps.cluster-name.domain:443"
+	    "default-route-openshift-image-registry.apps.[cluster-name].[domain]:443"
     ]
 }
 ```
@@ -170,13 +174,13 @@ root@jumpbox-host$
 4. create the following directory (while still logged in as root), using the address you copied earlier a directory name. It will look similar to the following below: 
 
 ```bash
-root@jumpbox-host$ mkdir -p /etc/docker/certs.d/default-route-openshift-image-registry.apps.cluster-name.domain
+root@jumpbox-host$ mkdir -p /etc/docker/certs.d/default-route-openshift-image-registry.apps.[cluster-name].[domain]
 ```
 
 5. create a `ca.crt` file from the openshift image registry you exposed earlier, into the directory created in the previous step. 
 
 ```bash
-root@jumpbox-host$ (echo | openssl s_client -showcerts -connect default-route-openshift-image-registry.apps.cluster-name.domain:443) > /etc/docker/certs.d/default-route-openshift-image-registry.apps.cluster-name.domain/ca.crt
+root@jumpbox-host$ (echo | openssl s_client -showcerts -connect default-route-openshift-image-registry.apps.[cluster-name].[domain]:443) > /etc/docker/certs.d/default-route-openshift-image-registry.apps.[cluster-name].[domain]/ca.crt
 ```
 modify the `ca.crt` file, by deleting lines, such that you only keep the cert information between the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` delimiters. It should look similar to the following when completed. 
 
