@@ -176,7 +176,7 @@ root@jumpbox-host$ mkdir -p /etc/docker/certs.d/default-route-openshift-image-re
 5. create a `ca.crt` file from the openshift image registry you exposed earlier, into the directory created in the previous step. 
 
 ```bash
-root@jumpbox-host$ (echo | openssl s_client -showcerts -connect ddefault-route-openshift-image-registry.apps.cluster-name.domain:443) > /etc/docker/certs.d/default-route-openshift-image-registry.apps.cluster-name.domain/ca.crt
+root@jumpbox-host$ (echo | openssl s_client -showcerts -connect default-route-openshift-image-registry.apps.cluster-name.domain:443) > /etc/docker/certs.d/default-route-openshift-image-registry.apps.cluster-name.domain/ca.crt
 ```
 modify the `ca.crt` file, by deleting lines, such that you only keep the cert information between the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` delimiters. It should look similar to the following when completed. 
 
