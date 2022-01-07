@@ -24,7 +24,7 @@ then
         --set "domainNamespaceLabelSelector=weblogic-operator\=enabled" \
         --wait
 else
-    echo "test"
+    echo "Weblogic Operator already installed"
 fi
 
 oc label ns demo-todo-wls12214 weblogic-operator=enabled
