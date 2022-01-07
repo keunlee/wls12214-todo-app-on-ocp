@@ -16,6 +16,8 @@ During a build, the Openshift Pipeline will leverage a Tekton Task which will ss
   - git CLI
   - wget CLI
   - Openshift CLI (`oc`) >= 4.6.x
+  - [Helm 3](https://helm.sh/docs/intro/install/)
+  - [jq](https://stedolan.github.io/jq/)
 - Openshift username/password (i.e. `oc_user/oc_passwd`) (via htpasswd)
     - You will need to set this up on your openshift cluster
 
@@ -302,3 +304,5 @@ Push the weblogic image to your openshift image registry:
 ```bash
 user@jumpbox-host$ docker push $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/openshift/weblogic:12.2.1.4
 ```
+
+
