@@ -1,6 +1,13 @@
 # This script is to be run on your jumpbox
 # see: docs/JUMPBOX_SETUP.md for more info
 
+wget https://github.com/oracle/weblogic-deploy-tooling/releases/download/release-1.9.12/weblogic-deploy.zip
+git clone https://github.com/oracle/weblogic-kubernetes-operator.git
+cd weblogic-kubernetes-operator
+git checkout b5e5c314d8
+
+cd ../
+
 WEBLOGIC_OPERATOR_NS_STATUS=$(oc get ns weblogic-operator -o json | jq .status.phase -r)
 if [ -z "$WEBLOGIC_OPERATOR_NS_STATUS" ];
 then
@@ -19,15 +26,6 @@ then
 else
     echo "test"
 fi
-
-
-
-# wget https://github.com/oracle/weblogic-deploy-tooling/releases/download/release-1.9.12/weblogic-deploy.zip
-# git clone https://github.com/oracle/weblogic-kubernetes-operator.git
-# cd weblogic-kubernetes-operator
-# git checkout b5e5c314d8
-
-# cd ../
 
 # oc label ns demo-todo-wls12214 weblogic-operator=enabled
 
