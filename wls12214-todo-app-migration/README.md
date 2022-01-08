@@ -55,7 +55,7 @@ oc new-project demo-todo-wls12214
 oc apply -f /path/to/jumpbox-secrets.yaml
 
 # create pipeline, pipeline resources, and a pipeline run to trigger a pipeline
-oc apply -f wls12214-todo-app-migration/pipeline/openshift
+oc create -f wls12214-todo-app-migration/pipeline/openshift
 
 # navigate to the route below after deployment
 oc get routes
