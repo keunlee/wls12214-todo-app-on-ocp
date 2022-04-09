@@ -302,7 +302,7 @@ container-registry.oracle.com/middleware/weblogic:12.2.1.4
 Tag the weblogic image you pulled for your openshift image registry:
 
 ```bash
-docker tag  container-registry.oracle.com/middleware/weblogic:12.2.1.4 $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/openshift/weblogic:12.2.1.4
+user@jumpbox-host$ docker tag container-registry.oracle.com/middleware/weblogic:12.2.1.4 $(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')/openshift/weblogic:12.2.1.4
 ```
 
 Push the weblogic image to your openshift image registry: 
