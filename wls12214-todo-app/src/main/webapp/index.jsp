@@ -4,7 +4,7 @@
 
 <head>
     <title>TodoMVC</title>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue@2"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/todomvc-app-css@2.2.0/index.css" />
     <style>
         [v-cloak] {
