@@ -49,11 +49,11 @@ NOTE: before creating the secret,  create a copy of the `known_hosts` file (i.e.
 
 ```bash
 jsmith@local-host$ oc create secret generic jumpbox-secrets \
-  --from-file=id_ed25519=/home/jsmith/.ssh/id_wls_jumpbox \ 
-  --from-file=id_ed25519.pub=/home/jsmith/.ssh/id_wls_jumpbox.pub \
-  --from-file=known_hosts=/path/to/copy-of/modified-file/known_hosts \
-  --from-literal=jumpbox_host=user@jumpbox-host  \
-  --dry-run=client -o yaml > ~/jumpbox-secrets.yaml
+> --from-file=id_ed25519=/home/jsmith/.ssh/id_wls_jumpbox \ 
+> --from-file=id_ed25519.pub=/home/jsmith/.ssh/id_wls_jumpbox.pub \
+>  --from-file=known_hosts=/path/to/copy-of/modified-file/known_hosts \
+>  --from-literal=jumpbox_host=user@jumpbox-host  \
+>  --dry-run=client -o yaml > ~/jumpbox-secrets.yaml
 ```
 the statement above will create a secret to a file (`jumpbox-secrets.yaml`) and not on the cluster. Do not distribute this file or check it in to source control.
 
